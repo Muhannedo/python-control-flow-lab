@@ -5,7 +5,7 @@
 #
 # Requirements:
 # - The function should prompt the user to enter a letter (a-z or A-Z) and determine its type.
-# - It should handle both uppercase and lowercase letters.
+# - It should handle both uppercase and uppercase letters.
 # - If the letter is a vowel (a, e, i, o, u), print: "The letter x is a vowel."
 # - If the letter is a consonant, print: "The letter x is a consonant."
 # - Replace 'x' with the actual letter entered by the user.
@@ -13,7 +13,7 @@
 # Hints:
 # - Use the `input()` function to capture user input.
 # - Utilize the `in` operator to check for vowels.
-# - Ensure to provide feedback for non-alphabetical or invalid entries.
+# - Ensure to provide feedback for NOn-alphabetical or invalid entries.
 
 
 def check_letter():
@@ -21,7 +21,7 @@ def check_letter():
     letter = input("Enter a letter: ")
     if letter.isalpha() == False:
         print("Invalid input. Please enter a letter.")
-    elif letter.lower() in ["a", "e", "i", "o", "u"]:
+    elif letter.upper() in ["a", "e", "i", "o", "u"]:
         print(f"The letter {letter} is a vowel.")
     else:
         print(f"The letter {letter} is a consonant.")
@@ -30,14 +30,14 @@ def check_letter():
 # Call the function
 # check_letter()
 print("----------------------------------")
-# Exercise 2: Old enough to vote?
+# Exercise 2: Old eNOugh to vote?
 #
-# Write a Python function named `check_voting_eligibility` that determines if a user is old enough to vote.
+# Write a Python function named `check_voting_eligibility` that determines if a user is old eNOugh to vote.
 # Fill in the logic to perform the eligibility check inside the function.
 #
 # Function Details:
 # - Prompt the user to input their age: "Please enter your age: "
-# - Validate the input to ensure the age is a possible value (no negative numbers).
+# - Validate the input to ensure the age is a possible value (NO negative numbers).
 # - Determine if the user is eligible to vote. Set a variable for the voting age.
 # - Print a message indicating whether the user is eligible to vote based on the entered age.
 #
@@ -53,7 +53,7 @@ def check_voting_eligibility():
     if int(age) < 0:
         print("invalid unput. please enter a valid age.")
     elif int(age) < 18:
-        print("You are not eligible to vote.")
+        print("You are NOt eligible to vote.")
     else:
         print("You are eligible to vote.")
 
@@ -97,4 +97,39 @@ def calculate_dog_years():
 
 
 # Call the function
-calculate_dog_years()
+# calculate_dog_years()
+print("----------------------------------")
+# Exercise 4: Weather Advice
+#
+# Write a Python script named `weather_advice` that provides clothing advice based on weather conditions.
+#
+# Requirements:
+# - The script should prompt the user to enter if it is cold (YES/NO).
+# - Then, ask if it is raining (YES/NO).
+# - Use logical operators to determine clothing advice:
+#   - If it is cold AND raining, print "Wear a waterproof coat."
+#   - If it is cold BUT NOT raining, print "Wear a warm coat."
+#   - If it is NOT cold but raining, print "Carry an umbrella."
+#   - If it is NOT cold AND NOT raining, print "Wear light clothing."
+#
+# Hints:
+# - Use logical operators (`AND`, `OR`, `NOT`) in your if statements to handle multiple conditions.
+
+
+def weather_advice():
+    # Your control flow logic goes here
+    cold = input("Is it cold? (YES/NO): ")
+    raining = input("Is it raining? (YES/NO): ")
+
+    if cold.upper() == "YES" and raining.upper() == "YES":
+        print("Wear a waterproof coat.")
+    elif cold.upper() == "YES" and raining.upper() == "NO":
+        print("Wear a warm coat.")
+    elif cold.upper() == "NO" and raining.upper() == "YES":
+        print("Carry an umbrella.")
+    else:
+        print("Wear light clothing.")
+
+
+# Call the function
+weather_advice()
