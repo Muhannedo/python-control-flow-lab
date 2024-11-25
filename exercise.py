@@ -18,13 +18,15 @@
 
 def check_letter():
     # Your control flow logic goes here
-    letter = input("Enter a letter: ")
-    if letter.isalpha() == False:
-        print("Invalid input. Please enter a letter.")
-    elif letter.upper() in ["a", "e", "i", "o", "u"]:
+    letter = input("Enter a letter (a-z or A-Z): ")
+    if len(letter) != 1:
+        print("Invalid input. Please enter a single letter.")
+    elif letter.upper() in ["A", "E", "I", "O", "U"]:
         print(f"The letter {letter} is a vowel.")
-    else:
+    elif letter.upper() not in ["A", "E", "I", "O", "U"]:
         print(f"The letter {letter} is a consonant.")
+    else:
+        print("Invalid input. Please enter a valid letter.")
 
 
 # Call the function
