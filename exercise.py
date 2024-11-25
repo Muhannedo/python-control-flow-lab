@@ -97,7 +97,7 @@ def calculate_dog_years():
 
 
 # Call the function
-# calculate_dog_years()
+calculate_dog_years()
 print("----------------------------------")
 # Exercise 4: Weather Advice
 #
